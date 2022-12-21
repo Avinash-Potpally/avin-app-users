@@ -7,20 +7,16 @@
     WebAppName: 'user_app_service_plan'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'PHP|8.0'
-# Test and package your PHP project.
-# Add steps that run tests, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/php
+- trigger:
+   main
 
-trigger:
-- main
-
-pool:
+- pool:
   vmImage: ubuntu-latest
 
-variables:
+- variables:
   phpVersion: 7.2
 
-steps:
+- steps:
 - script: |
     sudo update-alternatives --set php /usr/bin/php$(phpVersion)
     sudo update-alternatives --set phar /usr/bin/phar$(phpVersion)
