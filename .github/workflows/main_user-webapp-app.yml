@@ -18,7 +18,7 @@ jobs:
       - name: Azure Pipelines Action
         uses: Azure/pipelines@v1
         with:
-          azure-devops-project-url: https://dev.azure.com/avin-alpha-org/projectK
+          azure-devops-project-url: https://dev.azure.com/avin-alpha-org/AZ-Avin
           azure-pipeline-name: 'My user web app'
           azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
 
